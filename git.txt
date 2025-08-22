@@ -1,0 +1,15 @@
+# 1. Khởi tạo git repo
+git init
+
+# 2. Thêm remote (kết nối tới GitHub)
+git remote add origin https://github.com/your-username/python-practice.git
+
+# 3. Thêm tất cả file vào git
+git add .
+
+# 4. Commit code
+git commit -m "Initial commit: add factorial and count_words functions"
+
+# 5. Push code lên GitHub (main branch)
+git branch -M main
+git push -u origin main
