@@ -13,3 +13,7 @@ git commit -m "Initial commit: add factorial and count_words functions"
 # 5. Push code lên GitHub (main branch)
 git branch -M main
 git push -u origin main
+
+
+chạy hàm chỉ định
+python -m pytest test/test_login.py::test_login_success -v

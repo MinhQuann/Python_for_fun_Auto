@@ -12,7 +12,8 @@ load_dotenv()  # đọc .env
 def _build_chrome(headless: bool):
     options = ChromeOptions()
     if headless:
-        options.add_argument("--headless=new")
+        # options.add_argument("--headless=new")
+        options.add_argument("--start-maximized")
     options.add_argument("--window-size=1366,768")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
@@ -23,12 +24,12 @@ def _build_chrome(headless: bool):
 @pytest.fixture(scope="session")
 def config():
     return {
-        "base_url": os.getenv("BASE_URL", "https://portal.basebs.net/ucrm/home"),
+        "base_url": os.getenv("BASE_URL", "https://portal.basebs.net/ucrm/settings"),
         "browser": os.getenv("BROWSER", "chrome").lower(),
         "headless": os.getenv("HEADLESS", "true").lower() == "true",
         "implicit_wait": int(os.getenv("IMPLICIT_WAIT", "0")),
         "explicit_wait": int(os.getenv("EXPLICIT_WAIT", "10")),
-        "username": os.getenv("USERNAME", "crmxvtb2.0@basebs.com"),
+        "username": os.getenv("USERNAME", "123"),
         "password": os.getenv("PASSWORD", "12345678x@X"),
     }
 
