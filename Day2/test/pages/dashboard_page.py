@@ -1,6 +1,3 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
 from .base_page import BasePage
 from ultils.waits import (
     wait_for_element_to_be_visible,
@@ -20,4 +17,10 @@ class DashboardPage(BasePage):
         #     texts = [e.text.strip() for e in els if e.is_displayed() and e.text.strip()]
         #     return texts if len(texts) >= min_count else False
         els =  self.find_elements(self.DASHBOARD_TITLE)
+        # texts = []
+        # for e in els:
+        #     if e.is_displayed() and e.text.strip():
+        #         texts.append(e.text.strip())
+        #     print(texts)
+        # return texts if len(texts) >= min_count else False 
         return [e.text.strip() for e in els if e.is_displayed() and e.text.strip()]
