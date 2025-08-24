@@ -53,6 +53,18 @@ print("mới nè: " + str(teams[7]))
 teams.append(teams_add)
 print("đây nè: " + str(teams))
 
+# def appendFUNC(text:str) -> list[str]:
+#     mem = ["Quân", "nè", "Tèo"]
+#     if text not in mem:
+#         mem.append(text)
+#     else:
+#         print("Exist")
+#     return mem
+
+
+# print(appendFUNC("Tèo"))
+
+
 
 
 #Các hàm thao tác với list
@@ -63,8 +75,67 @@ match_score = [10, 9 ,8, 7]
 student_names.extend(match_score)  #nối 2 danh sách lại với nhau
 print(student_names)
 
-student_names.append("Thắng")
-print(student_names)
+
+student_names_memor = ["Quân", "Hưng", "Nam", "Hoài", "Nghĩa"]
+#                        0      1        2     3       4  
+print(student_names_memor)
+
+#Hàm Insert cần có index
+student_names_memor.insert(1, "Dũng")
+print("Chèn 'Dũng'vào list vị trí số 1: "+ str(student_names_memor))
+
+student_names_memor.remove("Nghĩa")
+print("xóa Nghĩa khỏi danh sách" + str(student_names_memor))
+
+student_names_memor.clear()
+print("Xóa hết phần tử trong list: " + str(student_names_memor))
+
+student_names_memor_new = ["Quân", "Thư", "Bơ"]
+student_names_memor_new.pop() #Loại bỏ phần tử cuối cùng
+print(student_names_memor_new)
+
+#trả ra vị trí của phần tử
+student_names_memor_new.index("Quân")
+print(student_names_memor_new.index("Quân"))
+
+
+
+#Đếm số phần tử xuất hiện trong danh sách
+list_abc = ["a", "b" ,"c", "d", "a", "a", "c", "a", "b"]
+print("Số lần xuất hiện: " + str(list_abc.count("a")))
+
+
+# def count_elements(data: list[str]) -> dict[str, int]:
+#     counts: dict[str, int] = {}
+#     for item in data:
+#         if item in counts:
+#             counts[item] += 1
+#         else:
+#             counts[item] = 1
+#     return counts         
+
+# res = count_elements(list_abc)
+# for k,v in res.items():
+#     print(f"{k}: {v}")
+
+
+list_abc.sort()
+print("Sort list: " + str(list_abc))
+
+list_score = [10, 9 ,5,7,8,3]
+
+list_score.sort()
+print("Sort number: " + str(list_score))
+
+list_score.reverse()
+print("Reverse: " + str(list_score))
+
+
+list_score2 = [10, 9 ,5,7,8,3]
+list_temp = list_score2.copy()
+print("Copy: " + str(list_temp))
+
+
 
 
 
