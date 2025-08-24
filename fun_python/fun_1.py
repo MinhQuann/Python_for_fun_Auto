@@ -103,6 +103,11 @@ age = input("Nhập tuổi: ")
 
 print(f"Xin chào, {name} năm nay bạn {age}")
 
+print("Xin chào " + name + " năm nay tôi " + age + " rồi")
+
+
+
+
 
 
 
