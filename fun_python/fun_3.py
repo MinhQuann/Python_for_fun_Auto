@@ -29,3 +29,12 @@ say_hello2("Quân", "abc@gmail.com")
 
 #Lệnh Return trong hàm
 "Khi gọi hàm và muốn nhận thông tin trả về => return"
+
+def add(a,b):
+    return a + b
+
+print(add(2,3))
+
+result = add(4,6)
+print(result)
+
